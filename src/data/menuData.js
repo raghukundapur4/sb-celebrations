@@ -1,0 +1,122 @@
+import { vegSouthIndianImages } from './imageAssets'
+
+export const menuCategories = [
+  {
+    id: 'south-indian',
+    name: 'South Indian',
+    image: vegSouthIndianImages.masalaDosa,
+    description: 'Authentic dosas, idlis, vadas, and traditional rice preparations.',
+    items: [
+      { name: 'Masala Dosa', description: 'Crispy rice crepe with spiced potato filling', tag: 'Popular' },
+      { name: 'Mini Idli Sambar', description: 'Steamed rice cakes with aromatic sambar', tag: 'Classic' },
+      { name: 'Pongal', description: 'Comforting ven pongal with ghee and pepper', tag: 'Breakfast' },
+      { name: 'Bisi Bele Bath', description: 'Flavorful Karnataka-style rice and lentil dish', tag: 'Signature' },
+      { name: 'Curd Rice', description: 'Cooling tempered curd rice with pickles', tag: 'Traditional' },
+      { name: 'Filter Coffee', description: 'Strong South Indian decoction coffee', tag: 'Beverage' },
+    ],
+  },
+  {
+    id: 'north-indian',
+    name: 'North Indian',
+    image: vegSouthIndianImages.thaliSpread,
+    description: 'Rich curries, breads, and North Indian specialties.',
+    items: [
+      { name: 'Paneer Butter Masala', description: 'Creamy tomato gravy with soft paneer cubes', tag: 'Popular' },
+      { name: 'Dal Makhani', description: 'Slow-cooked black lentils in rich cream', tag: 'Signature' },
+      { name: 'Naan & Roti', description: 'Freshly baked tandoor breads', tag: 'Bread' },
+      { name: 'Chole Bhature', description: 'Spiced chickpeas with fluffy fried bread', tag: 'Classic' },
+      { name: 'Palak Paneer', description: 'Spinach gravy with cottage cheese', tag: 'Healthy' },
+      { name: 'Raita', description: 'Cooling yogurt with cucumber and spices', tag: 'Side' },
+    ],
+  },
+  {
+    id: 'breakfast',
+    name: 'Breakfast',
+    image: vegSouthIndianImages.breakfastPlatter,
+    description: 'Morning spreads for events and corporate breakfasts.',
+    items: [
+      { name: 'Upma', description: 'Semolina preparation with tempered spices', tag: 'Light' },
+      { name: 'Pesarattu', description: 'Green gram dosa with ginger chutney', tag: 'Andhra' },
+      { name: 'Poori Bhaji', description: 'Fluffy pooris with spiced potato curry', tag: 'Classic' },
+      { name: 'Avalakki', description: 'Seasoned flattened rice with peanuts', tag: 'Quick' },
+      { name: 'Fresh Fruits', description: 'Seasonal fruit platter', tag: 'Healthy' },
+      { name: 'Fresh Juices', description: 'Orange, watermelon, and mixed fruit juices', tag: 'Beverage' },
+    ],
+  },
+  {
+    id: 'live-counters',
+    name: 'Live Counters',
+    image: vegSouthIndianImages.dosaBananaLeaf,
+    description: 'Interactive food stations prepared fresh before your guests.',
+    items: [
+      { name: 'Live Dosa Counter', description: 'Custom dosas made to order', tag: 'Interactive' },
+      { name: 'Chaat Counter', description: 'Pani puri, bhel puri, and dahi puri', tag: 'Popular' },
+      { name: 'Pasta Counter', description: 'Italian pasta with vegetarian sauces', tag: 'Fusion' },
+      { name: 'Chinese Counter', description: 'Indo-Chinese noodles and manchurian', tag: 'Fusion' },
+      { name: 'Paani Puri Station', description: 'Classic street-style pani puri experience', tag: 'Fun' },
+      { name: 'Ice Cream Counter', description: 'Assorted flavors with toppings', tag: 'Dessert' },
+    ],
+  },
+  {
+    id: 'sweets',
+    name: 'Sweets',
+    image: vegSouthIndianImages.sweets,
+    description: 'Traditional Indian mithai and festive sweet treats.',
+    items: [
+      { name: 'Gulab Jamun', description: 'Soft milk solids in rose-cardamom syrup', tag: 'Classic' },
+      { name: 'Rasmalai', description: 'Cottage cheese discs in saffron milk', tag: 'Premium' },
+      { name: 'Laddu', description: 'Besan and boondi laddus', tag: 'Festive' },
+      { name: 'Payasam', description: 'South Indian kheer with jaggery', tag: 'Traditional' },
+      { name: 'Jalebi', description: 'Crispy spirals in sugar syrup', tag: 'Popular' },
+      { name: 'Dry Fruit Halwa', description: 'Rich halwa with premium nuts', tag: 'Luxury' },
+    ],
+  },
+  {
+    id: 'desserts',
+    name: 'Desserts',
+    image: vegSouthIndianImages.woodenTableMeal,
+    description: 'Modern and classic vegetarian desserts to end your feast perfectly.',
+    items: [
+      { name: 'Fruit Trifle', description: 'Layered cream, cake, and fresh fruits', tag: 'Modern' },
+      { name: 'Chocolate Mousse', description: 'Silky dark chocolate dessert', tag: 'Premium' },
+      { name: 'Falooda', description: 'Rose milk with vermicelli and basil seeds', tag: 'Refreshing' },
+      { name: 'Kulfi', description: 'Traditional Indian ice cream on stick', tag: 'Classic' },
+      { name: 'Brownie Sundae', description: 'Warm brownie with ice cream', tag: 'Indulgent' },
+      { name: 'Seasonal Fruit Tart', description: 'Buttery tart with fresh fruits', tag: 'Elegant' },
+    ],
+  },
+  {
+    id: 'beverages',
+    name: 'Beverages',
+    image: vegSouthIndianImages.filterCoffee,
+    description: 'Refreshing drinks to complement every meal.',
+    items: [
+      { name: 'Buttermilk', description: 'Spiced chaas with curry leaves', tag: 'Traditional' },
+      { name: 'Sweet Lassi', description: 'Creamy yogurt drink with cardamom', tag: 'Popular' },
+      { name: 'Fresh Lime Soda', description: 'Sweet or salted lime refresher', tag: 'Refreshing' },
+      { name: 'Mango Lassi', description: 'Seasonal mango blended with yogurt', tag: 'Seasonal' },
+      { name: 'Jaljeera', description: 'Tangy cumin-mint spiced water', tag: 'Digestive' },
+      { name: 'Assorted Teas', description: 'Masala chai, green tea, and herbal infusions', tag: 'Warm' },
+    ],
+  },
+  {
+    id: 'chaats',
+    name: 'Chaats',
+    image: vegSouthIndianImages.vegStreetFood,
+    description: 'Vibrant street food favorites with premium ingredients.',
+    items: [
+      { name: 'Pani Puri', description: 'Crisp puris with tangy spiced water', tag: 'Signature' },
+      { name: 'Bhel Puri', description: 'Puffed rice with chutneys and sev', tag: 'Classic' },
+      { name: 'Dahi Puri', description: 'Crisp puris topped with yogurt and chutney', tag: 'Creamy' },
+      { name: 'Pav Bhaji', description: 'Spiced vegetable mash with buttered pav', tag: 'Hearty' },
+      { name: 'Samosa Chaat', description: 'Crushed samosa with chutneys and yogurt', tag: 'Fusion' },
+      { name: 'Aloo Tikki Chaat', description: 'Crispy potato patties with toppings', tag: 'Popular' },
+    ],
+  },
+]
+
+export const homeMenuCategories = menuCategories.map(({ id, name, image }) => ({
+  id,
+  name,
+  image,
+}))

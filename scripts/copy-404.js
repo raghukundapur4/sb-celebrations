@@ -1,0 +1,8 @@
+import { copyFileSync } from 'fs'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const rootDir = join(dirname(fileURLToPath(import.meta.url)), '..')
+const distDir = join(rootDir, 'dist')
+copyFileSync(join(distDir, 'index.html'), join(distDir, '404.html'))
+console.log('Copied index.html to 404.html for GitHub Pages SPA routing')
