@@ -11,10 +11,11 @@ export default function Footer() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="mb-6">
-                <BrandLogo
-                  imageClassName="h-14 w-auto max-w-[280px] brightness-110"
-                  showText={false}
-                />
+              <BrandLogo
+                variant="full"
+                imageClassName="h-24 w-auto sm:h-28"
+                showText={false}
+              />
               </div>
               <p className="text-sm leading-relaxed text-white/60">
                 Premium 100% vegetarian catering and wedding planning in Bengaluru — crafting memorable feasts for weddings, corporate events, and traditional celebrations.

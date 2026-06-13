@@ -1,26 +1,33 @@
 import { Link } from 'react-router-dom'
 import { siteConfig } from '../data/siteConfig'
-
-const logoSrc = `${import.meta.env.BASE_URL}logo.png`
+import LogoSvg from './LogoSvg'
 
 export default function BrandLogo({
   className = '',
   imageClassName = 'h-11 w-auto sm:h-12',
+  variant = 'mark',
   showText = false,
-  textClassName = '',
-  subtitleClassName = '',
+  light = false,
 }) {
   return (
     <Link to="/" className={`group flex items-center gap-3 ${className}`}>
-      <img
-        src={logoSrc}
-        alt={siteConfig.name}
-        className={`object-contain transition-transform duration-300 group-hover:scale-[1.02] ${imageClassName}`}
+      <LogoSvg
+        className={`shrink-0 transition-transform duration-300 group-hover:scale-[1.02] ${imageClassName}`}
+        variant={variant === 'full' ? 'full' : 'mark'}
+        title={siteConfig.name}
       />
       {showText && (
-        <div className={textClassName}>
-          <p className="font-heading text-lg font-semibold leading-tight">{siteConfig.name}</p>
-          <p className={`text-xs ${subtitleClassName}`}>{siteConfig.serviceLine}</p>
+        <div className="hidden min-w-0 sm:block">
+          <p
+            className={`truncate font-heading text-base font-semibold leading-tight lg:text-lg ${
+              light ? 'text-white' : 'text-dark'
+            }`}
+          >
+            {siteConfig.name}
+          </p>
+          <p className={`truncate text-xs ${light ? 'text-white/60' : 'text-dark/50'}`}>
+            {siteConfig.serviceLine}
+          </p>
         </div>
       )}
     </Link>

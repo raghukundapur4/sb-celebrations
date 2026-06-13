@@ -14,7 +14,7 @@ export const siteConfig = {
   address:
     'No 624/3, 1st Cross, KEB Road, Ittamadu, Banashankari 3rd Stage, Bengaluru, Karnataka 560085',
   addressShort: 'No 624/3, 1st Cross, KEB Road, Ittamadu, Banashankari 3rd Stage',
-  logo: '/logo.png',
+  logo: '/logo.svg',
   founded: 2010,
   googleReviews: {
     // Paste your real Google Maps links here when available.

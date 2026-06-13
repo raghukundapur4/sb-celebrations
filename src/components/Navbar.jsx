@@ -39,7 +39,12 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-16 items-center justify-between">
-          <BrandLogo imageClassName="h-10 w-auto max-w-[200px] sm:h-11 sm:max-w-[240px]" />
+          <BrandLogo
+            variant="mark"
+            imageClassName="h-10 w-10 sm:h-11 sm:w-11"
+            showText
+            light={!scrolled}
+          />
 
           <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
