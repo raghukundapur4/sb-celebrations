@@ -26,7 +26,7 @@ export default function HomeTrustBar() {
                   index < stats.length - 1 ? 'sm:border-r sm:border-dark/6' : ''
                 }`}
               >
-                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald/8 text-emerald">
+                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <Icon size={20} />
                 </div>
                 <p className="font-heading text-2xl font-bold text-dark sm:text-3xl">

@@ -34,7 +34,7 @@ export default function HomeFeatures() {
                 <span className="absolute top-4 right-4 font-heading text-5xl font-bold text-primary/8 transition-colors group-hover:text-primary/15">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald/10 to-primary/10 text-emerald transition-all duration-300 group-hover:from-emerald group-hover:to-emerald-light group-hover:text-white">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary transition-all duration-300 group-hover:from-accent group-hover:to-primary group-hover:text-black">
                   <Icon size={24} />
                 </div>
                 <h3 className="mb-2 font-heading text-xl font-semibold text-dark">{item.title}</h3>

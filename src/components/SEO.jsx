@@ -13,11 +13,6 @@ const pageMeta = {
     title: `About Us | ${brand}`,
     description: `Discover the story, mission, and values behind ${brand} — ${serviceLine.toLowerCase()} since ${siteConfig.founded}.`,
   },
-  '/services': {
-    title: `Catering Services | ${brand}`,
-    description:
-      'Wedding, corporate, housewarming, birthday, religious events and outdoor catering with custom packages.',
-  },
   '/menu': {
     title: `Menu | ${brand}`,
     description:

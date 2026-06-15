@@ -11,8 +11,8 @@ export default function Gallery() {
     <>
       <Hero
         badge="Portfolio"
-        title="Celebrations We've Catered"
-        subtitle="Browse our collection of weddings, corporate events, housewarming ceremonies, and traditional celebrations."
+        title="Our Catering in Pictures"
+        subtitle="Banana leaf feasts, full banquet spreads, and traditional vegetarian catering from weddings to corporate events."
         backgroundImage={heroImages.gallery}
         fullScreen={false}
         secondaryCta={null}
@@ -23,8 +23,8 @@ export default function Gallery() {
         <div className="container-custom">
           <SectionHeading
             badge="Gallery"
-            title="Our Work in Pictures"
-            subtitle="Filter by event type to explore relevant catering experiences."
+            title="Banana Leaf Catering Gallery"
+            subtitle="Every image reflects our signature style — full vegetarian spreads and traditional banana leaf service for events."
           />
           <GalleryGrid
             images={galleryImages}

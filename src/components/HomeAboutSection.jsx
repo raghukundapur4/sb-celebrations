@@ -35,9 +35,9 @@ export default function HomeAboutSection() {
                 className="aspect-square"
               />
             </div>
-            <div className="absolute -top-4 -left-4 rounded-2xl bg-emerald px-6 py-5 text-white shadow-float sm:-top-6 sm:-left-6">
+            <div className="absolute -top-4 -left-4 rounded-2xl bg-gradient-to-br from-accent to-primary px-6 py-5 text-black shadow-float sm:-top-6 sm:-left-6">
               <p className="font-heading text-4xl font-bold leading-none">{yearsSince}+</p>
-              <p className="mt-1.5 text-xs font-semibold tracking-wide text-white/80 uppercase">
+              <p className="mt-1.5 text-xs font-semibold tracking-wide text-black/70 uppercase">
                 Years of Excellence
               </p>
             </div>
@@ -54,14 +54,14 @@ export default function HomeAboutSection() {
             <h2 className="heading-section mb-5">{homeAbout.title}</h2>
             <p className="mb-8 text-base leading-relaxed text-dark/60">{homeAbout.description}</p>
 
-            <div className="mb-8 rounded-2xl border border-emerald/10 bg-emerald/5 p-5">
-              <h3 className="mb-4 font-heading text-xl font-semibold text-emerald">
+            <div className="mb-8 rounded-2xl border border-primary/15 bg-primary/5 p-5">
+              <h3 className="mb-4 font-heading text-xl font-semibold text-accent">
                 {homeAbout.yearsLabel}
               </h3>
               <ul className="space-y-3">
                 {homeAbout.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm font-medium text-dark/75">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald text-white">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-black">
                       <Check size={11} strokeWidth={3} />
                     </span>
                     {feature}

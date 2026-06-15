@@ -25,7 +25,7 @@ export default function BrandLogo({
           >
             {siteConfig.name}
           </p>
-          <p className={`truncate text-xs ${light ? 'text-white/60' : 'text-dark/50'}`}>
+          <p className={`truncate text-xs ${light ? 'text-primary/80' : 'text-dark/50'}`}>
             {siteConfig.serviceLine}
           </p>
         </div>

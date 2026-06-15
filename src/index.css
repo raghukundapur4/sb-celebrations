@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #B8860B;
-  --color-secondary: #D4A017;
-  --color-dark: #0F1419;
-  --color-light: #FFFCF7;
-  --color-cream: #F7F2EA;
-  --color-accent: #6B3410;
-  --color-emerald: #1A4D3E;
-  --color-emerald-light: #2D6A4F;
+  --color-primary: #D4AF37;
+  --color-secondary: #F0D78C;
+  --color-dark: #000000;
+  --color-light: #FAFAF8;
+  --color-cream: #F5F0E6;
+  --color-accent: #8B6914;
+  --color-emerald: #B8860B;
+  --color-emerald-light: #D4AF37;
 
-  --font-heading: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  --font-body: "DM Sans", "Inter", system-ui, sans-serif;
+  --font-heading: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", "DM Sans", system-ui, sans-serif;
 
-  --shadow-premium: 0 24px 60px -16px rgba(15, 20, 25, 0.18);
-  --shadow-card: 0 12px 40px -12px rgba(15, 20, 25, 0.1);
-  --shadow-glow: 0 0 48px rgba(184, 134, 11, 0.18);
-  --shadow-float: 0 20px 50px -12px rgba(15, 20, 25, 0.25);
+  --shadow-premium: 0 24px 60px -16px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 12px 40px -12px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 48px rgba(212, 175, 55, 0.25);
+  --shadow-float: 0 20px 50px -12px rgba(0, 0, 0, 0.4);
 }
 
 @layer base {
@@ -33,7 +33,7 @@
   }
 
   ::selection {
-    @apply bg-primary/20 text-dark;
+    @apply bg-primary/25 text-dark;
   }
 }
 
@@ -47,19 +47,19 @@
   }
 
   .glass-nav {
-    @apply border border-white/20 bg-white/80 backdrop-blur-xl;
+    @apply border border-primary/20 bg-black/85 backdrop-blur-xl;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-primary/35;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent via-primary to-secondary px-7 py-3.5 text-sm font-semibold tracking-wide text-black shadow-lg shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5 hover:from-primary hover:via-secondary hover:to-secondary hover:shadow-xl hover:shadow-primary/40;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/70 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/20;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary/50 bg-black/20 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/10;
   }
 
   .btn-outline-dark {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-emerald/20 bg-white px-7 py-3.5 text-sm font-semibold text-emerald transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald hover:bg-emerald/5 hover:shadow-card;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary/30 bg-white px-7 py-3.5 text-sm font-semibold text-accent transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-card;
   }
 
   .btn-secondary {
@@ -71,7 +71,7 @@
   }
 
   .heading-display {
-    @apply font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-dark sm:text-5xl lg:text-6xl;
+    @apply font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl;
   }
 
   .heading-section {
@@ -79,36 +79,36 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent;
   }
 
   .image-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/50 to-dark/20;
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20;
   }
 
   .section-badge {
-    @apply inline-flex rounded-full bg-primary/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-primary;
+    @apply inline-flex rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-accent;
   }
 
   .section-badge-light {
-    @apply inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-secondary backdrop-blur-sm;
+    @apply inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-secondary backdrop-blur-sm;
   }
 
   .section-accent-line {
-    @apply h-0.5 w-14 rounded-full bg-gradient-to-r from-primary to-secondary;
+    @apply h-0.5 w-14 rounded-full bg-gradient-to-r from-accent via-primary to-secondary;
   }
 
   .progress-bar-fill {
-    @apply bg-gradient-to-r from-emerald via-emerald-light to-primary;
+    @apply bg-gradient-to-r from-accent via-primary to-secondary;
   }
 
   .pattern-dots {
-    background-image: radial-gradient(circle, rgba(184, 134, 11, 0.08) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(212, 175, 55, 0.12) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, #0F1419 0%, #1A4D3E 45%, #0F1419 100%);
+    background: linear-gradient(160deg, #000000 0%, #1a1208 40%, #000000 100%);
   }
 }
 
@@ -124,7 +124,7 @@
 }
 
 .swiper-pagination-bullet {
-  background: #B8860B !important;
+  background: #D4AF37 !important;
   opacity: 0.35;
   width: 8px !important;
   height: 8px !important;

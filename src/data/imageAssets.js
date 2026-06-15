@@ -1,117 +1,135 @@
 const unsplash = (photoId, width = 800) =>
-  `https://images.unsplash.com/${photoId}?w=${width}&q=80`
+  `https://images.unsplash.com/${photoId}?w=${width}&q=80&auto=format&fit=crop`
 
 const unsplashHD = (photoId, width = 1920) =>
   `https://images.unsplash.com/${photoId}?w=${width}&q=92&auto=format&fit=crop`
 
+export const homeImage = `${import.meta.env.BASE_URL}home-image.jpg`
+
+// Curated South Indian banana-leaf & full catering spread photography
+const cateringPhotos = {
+  traditionalFeast: 'photo-1596797038530-2c107229654b',
+  dosaOnLeaf: 'photo-1743615467204-8fdaa85ff2db',
+  leafSpread: 'photo-1742281095650-dd3c50c08772',
+  southIndianBanquet: 'photo-1742281258189-3b933879867a',
+  weddingSpread: 'photo-1742281257687-092746ad6021',
+  riceAndCurries: 'photo-1742281257707-0c7f7e5ca9c6',
+  breakfastSpread: 'photo-1742281095661-29de44440bb6',
+  idliOnLeaf: 'photo-1741376509109-e9edd6f24f5f',
+  idliSambarLeaf: 'photo-1741376509047-66dae5df90f9',
+  bananaLeafCloseup: 'photo-1707529332935-bfa3925f15ac',
+  bananaLeafTable: 'photo-1707528904076-6dbefcfe9b4d',
+  bananaLeafPlatter: 'photo-1680359870490-d49895a285dd',
+}
+
 export const bananaLeafMealHD = {
-  hero: unsplashHD('photo-1596797038530-2c107229654b', 2400),
-  traditionalFeast: unsplashHD('photo-1596797038530-2c107229654b'),
-  dosaOnLeaf: unsplashHD('photo-1743615467204-8fdaa85ff2db'),
-  leafSpread: unsplashHD('photo-1742281095650-dd3c50c08772'),
-  southIndianBanquet: unsplashHD('photo-1742281258189-3b933879867a'),
-  weddingSpread: unsplashHD('photo-1742281257687-092746ad6021'),
+  hero: homeImage,
+  heroInset: unsplashHD(cateringPhotos.idliOnLeaf),
+  traditionalFeast: unsplashHD(cateringPhotos.leafSpread),
+  dosaOnLeaf: unsplashHD(cateringPhotos.dosaOnLeaf),
+  leafSpread: unsplashHD(cateringPhotos.leafSpread),
+  southIndianBanquet: homeImage,
+  weddingSpread: unsplashHD(cateringPhotos.leafSpread),
 }
 
 export const homeBananaLeafGallery = [
   {
     title: 'Traditional Banana Leaf Feast',
-    image: bananaLeafMealHD.traditionalFeast,
-    caption: 'Authentic South Indian meal served fresh on banana leaf',
+    image: homeImage,
+    caption: 'Full vegetarian sadhya served on fresh banana leaf for weddings',
     featured: true,
   },
   {
     title: 'Masala Dosa on Leaf',
     image: bananaLeafMealHD.dosaOnLeaf,
-    caption: 'Crispy dosa with chutney and sambar on banana leaf',
+    caption: 'Live dosa counter with banana leaf plating and traditional sides',
   },
   {
-    title: 'Festive Leaf Spread',
+    title: 'Festive Catering Spread',
     image: bananaLeafMealHD.leafSpread,
-    caption: 'Colorful curries, rice and accompaniments for celebrations',
+    caption: 'Colourful vegetarian curries, rice and accompaniments for celebrations',
   },
   {
-    title: 'Wedding Banquet',
-    image: bananaLeafMealHD.weddingSpread,
-    caption: 'Grand vegetarian spread for weddings and large gatherings',
+    title: 'Idli on Banana Leaf',
+    image: unsplashHD(cateringPhotos.idliOnLeaf),
+    caption: 'Steamed idlis with chutneys served on banana leaf for ceremonies',
   },
   {
-    title: 'South Indian Thali',
-    image: bananaLeafMealHD.southIndianBanquet,
-    caption: 'Complete thali with traditional sides and fresh preparations',
+    title: 'Vegetarian Breakfast Service',
+    image: unsplashHD(cateringPhotos.breakfastSpread),
+    caption: 'Morning event spreads with idli, dosa and traditional breakfast items',
   },
 ]
 
 export const vegSouthIndianImages = {
-  masalaDosa: unsplash('photo-1589302168068-964664d93dc0'),
-  dosaBananaLeaf: unsplash('photo-1743615467204-8fdaa85ff2db'),
-  idliSambar: unsplash('photo-1741376509047-66dae5df90f9'),
-  idliChutney: unsplash('photo-1741376509109-e9edd6f24f5f'),
-  vegThali: unsplash('photo-1742281258189-3b933879867a'),
-  thaliSpread: unsplash('photo-1742281257687-092746ad6021'),
-  riceVariety: unsplash('photo-1742281257707-0c7f7e5ca9c6'),
-  bananaLeafMeal: unsplash('photo-1596797038530-2c107229654b'),
-  leafMeal: unsplash('photo-1742281095650-dd3c50c08772'),
-  breakfastPlatter: unsplash('photo-1742281095661-29de44440bb6'),
-  southIndianPlate: unsplash('photo-1743674453123-93356ade2891'),
-  mealTray: unsplash('photo-1711153419402-336ee48f2138'),
-  woodenTableMeal: unsplash('photo-1725167260486-255a40ce00e3'),
-  vegStreetFood: unsplash('photo-1764699486769-fc9a8b03130a'),
-  sweets: unsplash('photo-1587241328411-58a9bae7154f'),
-  chaat: unsplash('photo-1601050690597-df0568f70950'),
-  filterCoffee: unsplash('photo-1495474472287-4d71bcdd2085'),
+  masalaDosa: unsplash(cateringPhotos.dosaOnLeaf),
+  dosaBananaLeaf: unsplash(cateringPhotos.dosaOnLeaf),
+  idliSambar: unsplash(cateringPhotos.idliSambarLeaf),
+  idliChutney: unsplash(cateringPhotos.idliOnLeaf),
+  vegThali: homeImage,
+  thaliSpread: homeImage,
+  riceVariety: unsplash(cateringPhotos.leafSpread),
+  bananaLeafMeal: homeImage,
+  leafMeal: unsplash(cateringPhotos.leafSpread),
+  breakfastPlatter: unsplash(cateringPhotos.breakfastSpread),
+  southIndianPlate: homeImage,
+  mealTray: homeImage,
+  woodenTableMeal: homeImage,
+  vegStreetFood: unsplash(cateringPhotos.leafSpread),
+  sweets: homeImage,
+  chaat: unsplash(cateringPhotos.breakfastSpread),
+  filterCoffee: unsplash(cateringPhotos.breakfastSpread),
 }
 
 export const vegMealShowcase = [
   {
-    title: 'Masala Dosa',
-    image: vegSouthIndianImages.masalaDosa,
-    caption: 'Golden crispy dosa with coconut chutney and sambar',
-  },
-  {
-    title: 'Idli & Sambar',
-    image: vegSouthIndianImages.idliSambar,
-    caption: 'Soft steamed idlis in aromatic lentil sambar',
-  },
-  {
-    title: 'Tamil Veg Thali',
-    image: vegSouthIndianImages.vegThali,
-    caption: 'Traditional vegetarian lunch thali with curries and rice',
-  },
-  {
-    title: 'Banana Leaf Feast',
+    title: 'Banana Leaf Wedding Feast',
     image: vegSouthIndianImages.bananaLeafMeal,
-    caption: 'Authentic South Indian meal served on fresh banana leaf',
+    caption: 'Full vegetarian banquet served on banana leaf for grand celebrations',
   },
   {
-    title: 'Idli with Chutneys',
-    image: vegSouthIndianImages.idliChutney,
-    caption: 'Fluffy idlis with coconut, tomato and mint chutneys',
-  },
-  {
-    title: 'Dosa on Banana Leaf',
+    title: 'Masala Dosa on Leaf',
     image: vegSouthIndianImages.dosaBananaLeaf,
-    caption: 'Masala dosa plated on banana leaf with classic sides',
+    caption: 'Live dosa counter with traditional chutney and sambar on banana leaf',
   },
   {
-    title: 'Full Veg Spread',
+    title: 'Idli on Banana Leaf',
+    image: vegSouthIndianImages.idliChutney,
+    caption: 'Steamed idlis with assorted chutneys served on fresh banana leaf',
+  },
+  {
+    title: 'South Indian Catering Thali',
+    image: vegSouthIndianImages.vegThali,
+    caption: 'Complete vegetarian thali spread for weddings and ceremonies',
+  },
+  {
+    title: 'Festive Leaf Spread',
+    image: vegSouthIndianImages.leafMeal,
+    caption: 'Traditional curries and rice arranged for housewarming events',
+  },
+  {
+    title: 'Wedding Banquet Spread',
     image: vegSouthIndianImages.thaliSpread,
-    caption: 'Complete vegetarian thali with rice, dal and sides',
+    caption: 'Premium vegetarian catering spread for large wedding gatherings',
   },
   {
-    title: 'South Indian Breakfast',
+    title: 'Rice & Curry Service',
+    image: vegSouthIndianImages.riceVariety,
+    caption: 'Flavoured rice and accompaniments for corporate and family events',
+  },
+  {
+    title: 'Breakfast Catering',
     image: vegSouthIndianImages.breakfastPlatter,
-    caption: 'Hearty morning platters with idli, dosa and filter coffee',
+    caption: 'Morning event spreads with idli, dosa and traditional breakfast items',
   },
 ]
 
 export const heroImages = {
-  home: bananaLeafMealHD.hero,
-  about: unsplash('photo-1742281258189-3b933879867a', 1920),
-  services: unsplash('photo-1742281257687-092746ad6021', 1920),
-  menu: unsplash('photo-1741376509047-66dae5df90f9', 1920),
-  gallery: unsplash('photo-1741376509109-e9edd6f24f5f', 1920),
-  contact: unsplash('photo-1742281257707-0c7f7e5ca9c6', 1920),
+  home: homeImage,
+  about: homeImage,
+  menu: homeImage,
+  gallery: homeImage,
+  contact: homeImage,
 }
 
-export const ogImage = unsplash('photo-1743615467204-8fdaa85ff2db', 1200)
+export const ogImage = homeImage

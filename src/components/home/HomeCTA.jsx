@@ -10,13 +10,13 @@ export default function HomeCTA() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={bananaLeafMealHD.traditionalFeast}
+          src={bananaLeafMealHD.leafSpread}
           alt=""
           className="h-full w-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-emerald/90 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/60 to-dark/40" />
+        <div className="absolute inset-0 bg-black/75 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-accent/40 to-black/50" />
       </div>
 
       <div className="relative z-10 section-padding">

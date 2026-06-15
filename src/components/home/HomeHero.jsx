@@ -11,7 +11,7 @@ export default function HomeHero() {
     <section className="relative min-h-screen overflow-hidden hero-gradient">
       <div className="pattern-dots absolute inset-0 opacity-60" />
       <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute -bottom-48 -left-32 h-[400px] w-[400px] rounded-full bg-emerald-light/20 blur-3xl" />
+      <div className="absolute -bottom-48 -left-32 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative z-10 flex min-h-screen items-center section-padding pb-32 pt-28 lg:pb-40">
         <div className="container-custom">
@@ -62,8 +62,8 @@ export default function HomeHero() {
               <div className="relative overflow-hidden rounded-[2rem] shadow-float ring-1 ring-white/20">
                 <img
                   src={bananaLeafMealHD.hero}
-                  alt="Traditional banana leaf vegetarian feast"
-                  className="aspect-[4/5] w-full object-cover sm:aspect-[5/6]"
+                  alt="Traditional South Indian sadhya served on banana leaf"
+                  className="aspect-[4/5] w-full object-cover object-center sm:aspect-[5/6]"
                   fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
@@ -75,7 +75,7 @@ export default function HomeHero() {
                 transition={{ delay: 0.6 }}
                 className="absolute -bottom-5 -left-4 rounded-2xl border border-white/10 bg-white p-4 shadow-float sm:-left-8 sm:p-5"
               >
-                <p className="font-heading text-3xl font-bold text-emerald">
+                <p className="font-heading text-3xl font-bold text-primary">
                   {siteConfig.googleReviews.rating}
                   <span className="text-secondary">★</span>
                 </p>
@@ -91,8 +91,8 @@ export default function HomeHero() {
                 className="absolute -top-4 -right-3 hidden overflow-hidden rounded-2xl border-4 border-white/90 shadow-float sm:block sm:h-28 sm:w-28 lg:h-36 lg:w-36"
               >
                 <img
-                  src={bananaLeafMealHD.dosaOnLeaf}
-                  alt="Dosa on banana leaf"
+                  src={bananaLeafMealHD.heroInset}
+                  alt="Idli with chutneys served on banana leaf"
                   className="h-full w-full object-cover"
                 />
               </motion.div>
@@ -105,7 +105,7 @@ export default function HomeHero() {
 
       <div className="absolute right-0 bottom-0 left-0">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-          <path d="M0 80L60 65C120 50 240 20 360 15C480 10 600 30 720 35C840 40 960 30 1080 25C1200 20 1320 20 1380 20L1440 20V80H0Z" fill="#FFFCF7" />
+          <path d="M0 80L60 65C120 50 240 20 360 15C480 10 600 30 720 35C840 40 960 30 1080 25C1200 20 1320 20 1380 20L1440 20V80H0Z" fill="#FAFAF8" />
         </svg>
       </div>
     </section>

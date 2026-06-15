@@ -1,6 +1,6 @@
 const logoFiles = {
-  full: `${import.meta.env.BASE_URL}logo.svg`,
-  mark: `${import.meta.env.BASE_URL}logo-mark.svg`,
+  full: `${import.meta.env.BASE_URL}logo.png`,
+  mark: `${import.meta.env.BASE_URL}logo-mark.png`,
 }
 
 export default function LogoSvg({
@@ -15,8 +15,8 @@ export default function LogoSvg({
       src={src}
       alt={title}
       className={className}
-      width={392}
-      height={variant === 'mark' ? 280 : 360}
+      width={variant === 'mark' ? 414 : 414}
+      height={variant === 'mark' ? 341 : 474}
       decoding="async"
     />
   )

@@ -19,8 +19,8 @@ export default function HomeServicesSection() {
             align="left"
             className="mb-0"
           />
-          <Link to="/services" className="btn-secondary shrink-0">
-            View All Services
+          <Link to="/contact" className="btn-secondary shrink-0">
+            Book Your Event
             <ArrowRight size={16} />
           </Link>
         </div>
@@ -42,7 +42,7 @@ export default function HomeServicesSection() {
                   className="h-full w-full transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/10 to-transparent" />
-                <span className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 font-heading text-lg font-bold text-emerald shadow-md">
+                <span className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 font-heading text-lg font-bold text-primary shadow-md">
                   {String(index + 1).padStart(2, '0')}
                 </span>
               </div>
@@ -51,7 +51,7 @@ export default function HomeServicesSection() {
                 <p className="mb-5 text-sm leading-relaxed text-dark/60">{service.description}</p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald transition-colors hover:text-primary"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-primary"
                 >
                   Book This Service
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />

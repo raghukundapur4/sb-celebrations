@@ -1,4 +1,4 @@
-import { bananaLeafMealHD } from './imageAssets'
+import { bananaLeafMealHD, homeImage } from './imageAssets'
 
 export const homeHero = {
   badge: 'Welcome To SB Celebration\'s',
@@ -20,8 +20,8 @@ export const homeAbout = {
     'Customized Menus For Every Event.',
     'Professional & Hygienic Service.',
   ],
-  image: bananaLeafMealHD.traditionalFeast,
-  secondaryImage: bananaLeafMealHD.dosaOnLeaf,
+  image: homeImage,
+  secondaryImage: bananaLeafMealHD.heroInset,
 }
 
 export const homeCommitment = {
@@ -32,44 +32,9 @@ export const homeCommitment = {
     { label: 'Exceptional Taste', value: 95 },
     { label: 'Menu Variety & Flexibility', value: 90 },
   ],
-  images: [bananaLeafMealHD.leafSpread, bananaLeafMealHD.southIndianBanquet],
+  images: [homeImage, bananaLeafMealHD.leafSpread],
 }
 
-export const homeMenuPreview = [
-  {
-    id: 'south-indian',
-    name: 'South Indian Main Course',
-    items: [
-      'Steamed Rice',
-      'Bisibele Bath',
-      'Sambar & Rasam',
-      'Majjige Huli',
-      'Avial & Poriyal',
-      'Curd Rice & Traditional Accompaniments',
-    ],
-  },
-  {
-    id: 'north-indian',
-    name: 'North Indian Main Course',
-    items: [
-      'Veg Biryani',
-      'Butter Naan & Tandoori Roti',
-      'Paneer Butter Masala',
-      'Malai Kofta',
-      'Dal Tadka & Raita',
-    ],
-  },
-  {
-    id: 'live-counters',
-    name: 'Live Counters',
-    items: ['Dosa Counter', 'Chaat Counter', 'Pav Bhaji', 'Jalebi Live', 'Ice Cream Live'],
-  },
-  {
-    id: 'sweets',
-    name: 'Traditional Sweets & Desserts',
-    items: ['Gulab Jamun', 'Mysore Pak', 'Holige / Obbattu', 'Payasam Varieties', 'Rasmalai'],
-  },
-]
 
 export const homeCta = {
   title: 'Planning a Special Event? Let Us Serve the Perfect Feast!',

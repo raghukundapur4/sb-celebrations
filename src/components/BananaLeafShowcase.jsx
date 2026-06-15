@@ -16,9 +16,9 @@ export default function BananaLeafShowcase() {
 
       <div className="container-custom relative z-10">
         <SectionHeading
-          badge="100% Pure Vegetarian"
-          title="Traditional Banana Leaf Meals"
-          subtitle="Experience the authentic charm of South Indian hospitality — vibrant curries, fragrant rice, and fresh accompaniments served on traditional banana leaf."
+          badge="Event Catering"
+          title="Banana Leaf Banquet Service"
+          subtitle="From intimate housewarmings to grand wedding receptions — we serve vibrant curries, fragrant rice, and fresh accompaniments on traditional banana leaf for every celebration."
           light
         />
 

@@ -25,6 +25,8 @@ export default function Navbar() {
     }
   }, [isOpen])
 
+  const navLight = !scrolled
+
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
@@ -41,9 +43,9 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <BrandLogo
             variant="mark"
-            imageClassName="h-10 w-10 sm:h-11 sm:w-11"
+            imageClassName="h-10 w-auto sm:h-11"
             showText
-            light={!scrolled}
+            light={navLight || scrolled}
           />
 
           <div className="hidden items-center gap-1 lg:flex">
@@ -54,12 +56,10 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   location.pathname === link.path
-                    ? scrolled
-                      ? 'text-primary'
-                      : 'text-secondary'
-                    : scrolled
-                      ? 'text-dark/70 hover:text-primary'
-                      : 'text-white/80 hover:text-white'
+                    ? 'text-primary'
+                    : navLight && !scrolled
+                      ? 'text-white/80 hover:text-secondary'
+                      : 'text-white/70 hover:text-primary'
                 }`}
               >
                 {link.name}
@@ -79,7 +79,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`rounded-xl p-2 lg:hidden ${
-              scrolled ? 'text-dark' : 'text-white'
+              navLight && !scrolled ? 'text-white' : 'text-primary'
             }`}
             aria-label="Toggle menu"
           >
@@ -94,7 +94,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 top-20 z-40 bg-dark/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 top-20 z-40 bg-black/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col items-center gap-2 p-8 pt-12">
               {navLinks.map((link, i) => (
@@ -109,7 +109,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className={`block rounded-xl px-6 py-3 text-lg font-medium ${
                       location.pathname === link.path
-                        ? 'text-secondary'
+                        ? 'text-primary'
                         : 'text-white/80'
                     }`}
                   >

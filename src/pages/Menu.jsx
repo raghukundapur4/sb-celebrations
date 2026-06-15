@@ -1,42 +1,59 @@
+import { useState } from 'react'
 import Hero from '../components/Hero'
 import SectionHeading from '../components/SectionHeading'
 import MenuTabs from '../components/MenuTabs'
 import CTASection from '../components/CTASection'
-import { menuCategories } from '../data/menuData'
+import { menuGroups, getMenuCategoriesByGroup } from '../data/menuData'
 import { heroImages } from '../data/imageAssets'
 
-const menuPageCategories = menuCategories.filter((cat) =>
-  ['south-indian', 'north-indian', 'breakfast', 'live-counters', 'desserts', 'beverages'].includes(cat.id)
-)
-
 export default function Menu() {
+  const [activeGroup, setActiveGroup] = useState(menuGroups[0]?.id)
+  const activeCategories = getMenuCategoriesByGroup(activeGroup)
+
   return (
     <>
       <Hero
-        badge="Our Menu"
-        title="A Culinary Journey Awaits"
-        subtitle="Explore our extensive menu featuring authentic South Indian classics, North Indian favorites, live counters, and more."
+        badge="Catering Menu"
+        title="Complete Vegetarian Catering Menu"
+        subtitle="Browse our full event catering menu — from welcome drinks and live counters to traditional sweets and banquet spreads. Every package is customized for your guest count and celebration."
         backgroundImage={heroImages.menu}
         fullScreen={false}
         secondaryCta={null}
-        primaryCta={{ label: 'Request Custom Menu', to: '/contact' }}
+        primaryCta={{ label: 'Plan Your Event Menu', to: '/contact' }}
       />
 
       <section className="section-padding">
         <div className="container-custom">
           <SectionHeading
-            badge="Explore"
-            title="Browse By Category"
-            subtitle="Select a category to discover our signature dishes and live counter offerings."
+            badge="Event Packages"
+            title="Choose Your Menu Categories"
+            subtitle="We offer flexible catering packages for weddings, housewarming ceremonies, corporate events, birthday parties, and traditional celebrations. Select a section below to explore available dishes."
           />
-          <MenuTabs categories={menuPageCategories} />
+
+          <div className="mb-10 flex flex-wrap justify-center gap-2">
+            {menuGroups.map((group) => (
+              <button
+                key={group.id}
+                onClick={() => setActiveGroup(group.id)}
+                className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-all ${
+                  activeGroup === group.id
+                    ? 'border-primary bg-primary text-black shadow-md shadow-primary/25'
+                    : 'border-dark/10 bg-white text-dark/70 hover:border-primary/30 hover:text-primary'
+                }`}
+              >
+                {group.name}
+              </button>
+            ))}
+          </div>
+
+          <MenuTabs categories={activeCategories} showGroupIntro={false} />
         </div>
       </section>
 
       <CTASection
-        title="Need a Custom Menu For Your Event?"
-        subtitle="Our chefs will craft a personalized menu based on your preferences, guest count, and event theme."
-        buttonLabel="Plan Your Menu"
+        title="Need a Customized Catering Package?"
+        subtitle="Share your event type, guest count, and preferences — our team will design a personalized menu with live counters, service staff, and complete banquet setup."
+        buttonLabel="Request Menu Consultation"
       />
     </>
   )

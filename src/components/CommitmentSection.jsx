@@ -8,7 +8,7 @@ function ProgressBar({ label, value, delay = 0 }) {
     <div className="mb-7 last:mb-0">
       <div className="mb-2.5 flex items-center justify-between gap-4">
         <span className="text-sm font-semibold text-dark">{label}</span>
-        <span className="font-heading text-xl font-bold text-emerald">{value}%</span>
+        <span className="font-heading text-xl font-bold text-primary">{value}%</span>
       </div>
       <div className="h-2.5 overflow-hidden rounded-full bg-dark/6">
         <motion.div
@@ -66,7 +66,7 @@ export default function CommitmentSection() {
                 />
               </div>
             </div>
-            <div className="absolute top-1/2 left-1/2 z-10 flex h-[4.5rem] w-[4.5rem] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-emerald to-emerald-light font-heading text-xl font-bold text-white shadow-float">
+            <div className="absolute top-1/2 left-1/2 z-10 flex h-[4.5rem] w-[4.5rem] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-accent via-primary to-secondary font-heading text-xl font-bold text-black shadow-float">
               SB
             </div>
           </motion.div>
