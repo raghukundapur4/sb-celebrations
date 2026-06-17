@@ -6,6 +6,8 @@ const unsplashHD = (photoId, width = 1920) =>
 
 export const homeImage = `${import.meta.env.BASE_URL}home-image.jpg`
 
+const galleryImage = (filename) => `${import.meta.env.BASE_URL}gallery/${filename}`
+
 // Curated South Indian banana-leaf & full catering spread photography
 const cateringPhotos = {
   traditionalFeast: 'photo-1596797038530-2c107229654b',
@@ -128,8 +130,33 @@ export const heroImages = {
   home: homeImage,
   about: homeImage,
   menu: homeImage,
-  gallery: homeImage,
+  gallery: galleryImage('banana-leaf-feast-service.jpg'),
   contact: homeImage,
+}
+
+export const galleryPhotos = {
+  cateringTeam: galleryImage('catering-team.jpg'),
+  sweetsBarfiLaddu: galleryImage('sweets-barfi-laddu.jpg'),
+  yellowRiceLeafCups: galleryImage('yellow-rice-leaf-cups.jpg'),
+  yellowSweetsTrays: galleryImage('yellow-sweets-trays.jpg'),
+  fruitSaladCups: galleryImage('fruit-salad-cups.jpg'),
+  bananaLeafFeastService: galleryImage('banana-leaf-feast-service.jpg'),
+  masalaDosaGriddle: galleryImage('masala-dosa-griddle.jpg'),
+  chocolateSaffronRolls: galleryImage('chocolate-saffron-rolls.jpg'),
+  rabadiPaan: galleryImage('rabadi-paan.jpg'),
+  mangoPaan: galleryImage('mango-paan.jpg'),
+  fruitSkewers: galleryImage('fruit-skewers.jpg'),
+  creamDessertClayBowls: galleryImage('cream-dessert-clay-bowls.jpg'),
+  mirchiBajji: galleryImage('mirchi-bajji.jpg'),
+  kebabSticks: galleryImage('kebab-sticks.jpg'),
+  fruitCupsDisplay: galleryImage('fruit-cups-display.jpg'),
+  fruitCupsCloseup: galleryImage('fruit-cups-closeup.jpg'),
+  fruitCupsVariety: galleryImage('fruit-cups-variety.jpg'),
+  sesameConeSnacks: galleryImage('sesame-cone-snacks.jpg'),
+  spicedOkra: galleryImage('spiced-okra.jpg'),
+  malaiRollClayPots: galleryImage('malai-roll-clay-pots.jpg'),
+  sesameConeSnacksBatch: galleryImage('sesame-cone-snacks-batch.jpg'),
+  decoratedFlowerSweets: galleryImage('decorated-flower-sweets.jpg'),
 }
 
 export const ogImage = homeImage
