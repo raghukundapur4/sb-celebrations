@@ -61,6 +61,16 @@ export const homeBananaLeafGallery = [
     image: unsplashHD(cateringPhotos.breakfastSpread),
     caption: 'Morning event spreads with idli, dosa and traditional breakfast items',
   },
+  {
+    title: 'Traditional Kerala Sadhya',
+    image: galleryImage('sadhya-banana-leaf-feast.png'),
+    caption: 'Authentic sadhya with sambar, payasam, pickles and accompaniments on banana leaf',
+  },
+  {
+    title: 'Festive Mithai Selection',
+    image: galleryImage('mithai-sweets-box.png'),
+    caption: 'Assorted Indian sweets — jalebi, laddu, barfi and peda for celebrations',
+  },
 ]
 
 export const vegSouthIndianImages = {
@@ -157,6 +167,8 @@ export const galleryPhotos = {
   malaiRollClayPots: galleryImage('malai-roll-clay-pots.jpg'),
   sesameConeSnacksBatch: galleryImage('sesame-cone-snacks-batch.jpg'),
   decoratedFlowerSweets: galleryImage('decorated-flower-sweets.jpg'),
+  sadhyaBananaLeafFeast: galleryImage('sadhya-banana-leaf-feast.png'),
+  mithaiSweetsBox: galleryImage('mithai-sweets-box.png'),
 }
 
 export const ogImage = homeImage
