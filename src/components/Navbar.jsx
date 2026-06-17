@@ -45,7 +45,7 @@ export default function Navbar() {
             variant="mark"
             imageClassName="h-10 w-auto sm:h-11"
             showText
-            light={navLight || scrolled}
+            light={navLight && !scrolled}
           />
 
           <div className="hidden items-center gap-1 lg:flex">
@@ -59,7 +59,7 @@ export default function Navbar() {
                     ? 'text-primary'
                     : navLight && !scrolled
                       ? 'text-white/80 hover:text-secondary'
-                      : 'text-white/70 hover:text-primary'
+                      : 'text-dark/70 hover:text-primary'
                 }`}
               >
                 {link.name}
@@ -79,7 +79,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`rounded-xl p-2 lg:hidden ${
-              navLight && !scrolled ? 'text-white' : 'text-primary'
+              navLight && !scrolled && !isOpen ? 'text-white' : 'text-dark'
             }`}
             aria-label="Toggle menu"
           >
@@ -94,7 +94,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 top-20 z-40 bg-black/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 top-20 z-40 bg-light/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col items-center gap-2 p-8 pt-12">
               {navLinks.map((link, i) => (
@@ -110,7 +110,7 @@ export default function Navbar() {
                     className={`block rounded-xl px-6 py-3 text-lg font-medium ${
                       location.pathname === link.path
                         ? 'text-primary'
-                        : 'text-white/80'
+                        : 'text-dark/80 hover:text-primary'
                     }`}
                   >
                     {link.name}

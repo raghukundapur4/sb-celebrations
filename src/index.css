@@ -47,7 +47,7 @@
   }
 
   .glass-nav {
-    @apply border border-primary/20 bg-black/85 backdrop-blur-xl;
+    @apply border border-dark/8 bg-white/90 backdrop-blur-xl shadow-card;
   }
 
   .btn-primary {
