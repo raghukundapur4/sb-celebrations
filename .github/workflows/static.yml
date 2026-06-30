@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build && node scripts/copy-404.js
         env:
-          VITE_BASE: /sb-celebrations/
+          VITE_BASE: /
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: process.env.VITE_BASE || '/sb-celebrations/',
+  base: process.env.VITE_BASE || '/',
 })

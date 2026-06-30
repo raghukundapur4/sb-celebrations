@@ -4,8 +4,9 @@ React/Vite site for SB Celebration's.
 
 ## GitHub Pages Deployment
 
-This project is a Vite app and must be deployed from the built `dist` folder.
-GitHub Pages should use the repository workflow, not the raw source files.
+This project is a Vite app deployed to the custom domain `sbcelebrations.in`.
+It must be deployed from the built `dist` folder. GitHub Pages should use the
+repository workflow, not the raw source files.
 
 Repository settings:
 
@@ -15,7 +16,8 @@ Repository settings:
 
 If Pages is set to `Deploy from a branch` with `main / (root)`, GitHub serves
 the development `index.html` directly. The live site will then try to load
-`/src/main.jsx`, which is not available on GitHub Pages and causes a blank page.
+`/src/main.jsx` as `text/jsx`, which browsers reject for module scripts and
+causes a blank page.
 
 Local checks:
 
